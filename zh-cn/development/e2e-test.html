@@ -16,13 +16,13 @@
 <p>E2E，是“End to End”的缩写，可以翻译成“端到端”测试。它模仿用户，从某个入口开始，逐步执行操作，直到完成某项工作。与单元测试不同，后者通常需要测试参数、参数类型、参数值、参数数量、返回值、抛出错误等，目的在于保证特定函数能够在任何情况下都稳定可靠完成工作。单元测试假定只要所有函数都正常工作，那么整个产品就能正常工作。</p>
 <p>相对来说，E2E 测试并没有那么强调要覆盖全部使用场景，它关注的<strong>一个完整的操作链是否能够完成</strong>。对于 Web 前端来说，还关注<strong>界面布局、内容信息是否符合预期</strong>。</p>
 <p>比如，登陆界面的 E2E 测试，关注用户是否能够正常输入，正常登录；登陆失败的话，是否能够正确显示错误信息。至于输入不合法的内容是否处理，并不是所关注的重点。</p>
-<h3>2、<a href="https://www.selenium.dev/">Selenium</a> 测试框架</h3>
-<p>Selenium 是一种开源测试工具，用于在 Web 浏览器上执行自动化测试。该框架使用 WebDriver 通过浏览器的原生组件，转化 Web Service 的命令为浏览器 native 的调用来完成操作。简单来说，就是模拟浏览器，对于页面的元素进行选择操作。</p>
+<h3>2、Selenium 测试框架</h3>
+<p><a href="(https://www.selenium.dev/)">Selenium</a> 是一种开源测试工具，用于在 Web 浏览器上执行自动化测试。该框架使用 WebDriver 通过浏览器的原生组件，转化 Web Service 的命令为浏览器 native 的调用来完成操作。简单来说，就是模拟浏览器，对于页面的元素进行选择操作。</p>
 <p>WebDriver 是一个 API 和协议，它定义了一个语言中立的接口，用于控制 web 浏览器的行为。 每个浏览器都有一个特定的 WebDriver 实现，称为驱动程序。驱动程序是负责委派给浏览器的组件，并处理与 Selenium 和浏览器之间的通信。</p>
 <p>Selenium 框架通过一个面向用户的界面将所有这些部分连接在一起， 该界面允许透明地使用不同的浏览器后端， 从而实现跨浏览器和跨平台自动化。</p>
 <h2>二、E2E 测试</h2>
 <h3>1、E2E-Pages</h3>
-<p>本次测试使用 docker-compose 部署，当前测试的为单机模式，主要用于检验一些例如“增删改查”基本功能，后期如需做集群验证，例如不同服务之间的协作，或者各个服务之间的通讯机制，可参考 <code>deploy/docker/docker-compose.yml</code>来配置。</p>
+<p>DolphinScheduler 的 E2E 测试使用 docker-compose 部署，当前测试的为单机模式，主要用于检验一些例如“增删改查”基本功能，后期如需做集群验证，例如不同服务之间的协作，或者各个服务之间的通讯机制，可参考 <code>deploy/docker/docker-compose.yml</code>来配置。</p>
 <p>对于 E2E 测试（前端这一块），使用页面模型的形式，主要为每一个页面建立一个对应的模型。下面以登录页为例：</p>
 <pre><code class="language-java"><span class="hljs-keyword">package</span> org.apache.dolphinscheduler.e2e.pages;
 
@@ -150,6 +150,7 @@
     }
 </code></pre>
 <p>其余的都是类似的情况，可参考具体的源码来理解。</p>
+<p><a href="https://github.com/apache/dolphinscheduler/tree/dev/dolphinscheduler-e2e/dolphinscheduler-e2e-case/src/test/java/org/apache/dolphinscheduler/e2e/cases">https://github.com/apache/dolphinscheduler/tree/dev/dolphinscheduler-e2e/dolphinscheduler-e2e-case/src/test/java/org/apache/dolphinscheduler/e2e/cases</a></p>
 <h2>三、补充</h2>
 <p>在本地运行 E2E 测试的时候，可以配置 <code>-Dlocal=true</code> 参数，用于连接本地，方便对于 UI 界面的更改。</p>
 <p><img src="../../img/e2e-test/Dlocal.png" alt="Dlocal"></p>
