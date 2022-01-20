@@ -23,7 +23,7 @@
 <h2>二、E2E 测试</h2>
 <h3>1、E2E-Pages</h3>
 <p>DolphinScheduler 的 E2E 测试使用 docker-compose 部署，当前测试的为单机模式，主要用于检验一些例如“增删改查”基本功能，后期如需做集群验证，例如不同服务之间的协作，或者各个服务之间的通讯机制，可参考 <code>deploy/docker/docker-compose.yml</code>来配置。</p>
-<p>对于 E2E 测试（前端这一块），使用页面模型的形式，主要为每一个页面建立一个对应的模型。下面以登录页为例：</p>
+<p>对于 E2E 测试（前端这一块），使用 <a href="https://www.selenium.dev/documentation/guidelines/page_object_models/">页面模型</a> 的形式，主要为每一个页面建立一个对应的模型。下面以登录页为例：</p>
 <pre><code class="language-java"><span class="hljs-keyword">package</span> org.apache.dolphinscheduler.e2e.pages;
 
 <span class="hljs-keyword">import</span> org.apache.dolphinscheduler.e2e.pages.common.NavBarPage;
