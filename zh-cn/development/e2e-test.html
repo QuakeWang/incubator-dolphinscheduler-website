@@ -125,7 +125,7 @@
 <h3>2、E2E-Cases</h3>
 <p>当前所支持的 E2E 测试案例，主要包括：文件管理、项目管理、队列管理、租户管理、用户管理、Worker 分组管理和工作流测试。</p>
 <p><img src="../../img/e2e-test/E2E_Cases.png" alt="E2E_Cases"></p>
-<p>下面以租户管理测试为例，前文以及说明，我们使用 docker-compose 进行部署，所以每个测试案例，都需要以注解的形式引入对应的文件。</p>
+<p>下面以租户管理测试为例，前文已经说明，我们使用 docker-compose 进行部署，所以每个测试案例，都需要以注解的形式引入对应的文件。</p>
 <p>使用 Selenium 所提供的 RemoteWebDriver 来加载浏览器。在每个测试案例开始之前都需要进行一些准备工作。比如：登录用户、跳转到对应的页面（根据具体的测试案例而定）。</p>
 <pre><code class="language-java">    <span class="hljs-meta">@BeforeAll</span>
     <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">setup</span><span class="hljs-params">()</span> </span>{
@@ -163,7 +163,7 @@
   <script src="//cdn.jsdelivr.net/npm/react-dom@15.6.2/dist/react-dom.min.js"></script>
   <script>window.rootPath = '';</script>
   <script src="/build/vendor.41c1265.js"></script>
-  <script src="/build/development.md.0fb3c49.js"></script>
+  <script src="/build/development.md.627e13d.js"></script>
   <script>
     var _hmt = _hmt || [];
     (function() {
