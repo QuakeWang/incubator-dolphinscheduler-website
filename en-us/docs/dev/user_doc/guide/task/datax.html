@@ -20,72 +20,28 @@
 </ul>
 <h2>Task Parameter</h2>
 <ul>
-<li>
-<p><strong>Node name</strong>: The node name in a workflow definition is unique.</p>
-</li>
-<li>
-<p><strong>Run flag</strong>: Identifies whether this node can be scheduled normally, if it does not need to be executed, you can turn on the prohibition switch.</p>
-</li>
-<li>
-<p><strong>Descriptive information</strong>: describe the function of the node.</p>
-</li>
-<li>
-<p><strong>Task priority</strong>: When the number of worker threads is insufficient, they are executed in order from high to low, and when the priority is the same, they are executed according to the first-in first-out principle.</p>
-</li>
-<li>
-<p><strong>Worker grouping</strong>: Tasks are assigned to the machines of the worker group to execute. If Default is selected, a worker machine will be randomly selected for execution.</p>
-</li>
-<li>
-<p><strong>Environment Name</strong>: Configure the environment name in which to run the script.</p>
-</li>
-<li>
-<p><strong>Number of failed retry attempts</strong>: The number of times the task failed to be resubmitted.</p>
-</li>
-<li>
-<p><strong>Failed retry interval</strong>: The time, in cents, interval for resubmitting the task after a failed task.</p>
-</li>
-<li>
-<p><strong>Delayed execution time</strong>: The time, in cents, that a task is delayed in execution.</p>
-</li>
-<li>
-<p><strong>Timeout alarm</strong>: Check the timeout alarm and timeout failure. When the task exceeds the &quot;timeout period&quot;, an alarm email will be sent and the task execution will fail.</p>
-</li>
-<li>
-<p><strong>Custom template</strong>: Custom the content of the DataX node's json profile when the default data source provided does not meet the required requirements.</p>
-</li>
-<li>
-<p><strong>json</strong>: json configuration file for DataX synchronization.</p>
-</li>
-<li>
-<p><strong>Custom parameters</strong>: SQL task type, and stored procedure is a custom parameter order to set values for the method. The custom parameter type and data type are the same as the stored procedure task type. The difference is that the SQL task type custom parameter will replace the ${variable} in the SQL statement.</p>
-</li>
-<li>
-<p><strong>Data source</strong>: Select the data source from which the data will be extracted.</p>
-</li>
-<li>
-<p><strong>sql statement</strong>: the sql statement used to extract data from the target database, the sql query column name is automatically parsed when the node is executed, and mapped to the target table synchronization column name. When the source table and target table column names are inconsistent, they can be converted by column alias.</p>
-</li>
-<li>
-<p><strong>Target library</strong>: Select the target library for data synchronization.</p>
-</li>
-<li>
-<p><strong>Pre-sql</strong>: Pre-sql is executed before the sql statement (executed by the target library).</p>
-</li>
-<li>
-<p><strong>Post-sql</strong>: Post-sql is executed after the sql statement (executed by the target library).</p>
-</li>
-<li>
-<p><strong>Stream limit (number of bytes)</strong>: Limits the number of bytes in the query.</p>
-</li>
-<li>
-<p><strong>Limit flow (number of records)</strong>: Limit the number of records for a query.</p>
-</li>
-<li>
-<p><strong>Running memory</strong>: the minimum and maximum memory required can be configured to suit the actual production environment.</p>
-</li>
-<li>
-<p><strong>Predecessor task</strong>: Selecting a predecessor task for the current task will set the selected predecessor task as upstream of the current task.</p>
-</li>
+<li><strong>Node name</strong>: The node name in a workflow definition is unique.</li>
+<li><strong>Run flag</strong>: Identifies whether this node can be scheduled normally, if it does not need to be executed, you can turn on the prohibition switch.</li>
+<li><strong>Descriptive information</strong>: describe the function of the node.</li>
+<li><strong>Task priority</strong>: When the number of worker threads is insufficient, they are executed in order from high to low, and when the priority is the same, they are executed according to the first-in first-out principle.</li>
+<li><strong>Worker grouping</strong>: Tasks are assigned to the machines of the worker group to execute. If Default is selected, a worker machine will be randomly selected for execution.</li>
+<li><strong>Environment Name</strong>: Configure the environment name in which to run the script.</li>
+<li><strong>Number of failed retry attempts</strong>: The number of times the task failed to be resubmitted.</li>
+<li><strong>Failed retry interval</strong>: The time, in cents, interval for resubmitting the task after a failed task.</li>
+<li><strong>Delayed execution time</strong>: The time, in cents, that a task is delayed in execution.</li>
+<li><strong>Timeout alarm</strong>: Check the timeout alarm and timeout failure. When the task exceeds the &quot;timeout period&quot;, an alarm email will be sent and the task execution will fail.</li>
+<li><strong>Custom template</strong>: Custom the content of the DataX node's json profile when the default data source provided does not meet the required requirements.</li>
+<li><strong>json</strong>: json configuration file for DataX synchronization.</li>
+<li><strong>Custom parameters</strong>: SQL task type, and stored procedure is a custom parameter order to set values for the method. The custom parameter type and data type are the same as the stored procedure task type. The difference is that the SQL task type custom parameter will replace the ${variable} in the SQL statement.</li>
+<li><strong>Data source</strong>: Select the data source from which the data will be extracted.</li>
+<li><strong>sql statement</strong>: the sql statement used to extract data from the target database, the sql query column name is automatically parsed when the node is executed, and mapped to the target table synchronization column name. When the source table and target table column names are inconsistent, they can be converted by column alias.</li>
+<li><strong>Target library</strong>: Select the target library for data synchronization.</li>
+<li><strong>Pre-sql</strong>: Pre-sql is executed before the sql statement (executed by the target library).</li>
+<li><strong>Post-sql</strong>: Post-sql is executed after the sql statement (executed by the target library).</li>
+<li><strong>Stream limit (number of bytes)</strong>: Limits the number of bytes in the query.</li>
+<li><strong>Limit flow (number of records)</strong>: Limit the number of records for a query.</li>
+<li><strong>Running memory</strong>: the minimum and maximum memory required can be configured to suit the actual production environment.</li>
+<li><strong>Predecessor task</strong>: Selecting a predecessor task for the current task will set the selected predecessor task as upstream of the current task.</li>
 </ul>
 <h2>Task Example</h2>
 <p>This example demonstrates importing data from Hive into MySQL.</p>
